@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title is="wc-title">Muhammed Taha Ayan</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<header class="bg-white p-3 text-center shadow-sm">
+  <h3 is="wc-page-title"></h3>
+</header>
+
+<wc-router current="wc-list">
+  <template id="wc-list-item">
+    <div class="col-12 mb-5">
+      <div class="card">
+        <slot name="image"></slot>
+        <div class="card-overlay-effect"></div>
+        <div class="card-img-overlay text-white">
+          <slot name="title"></slot>
+          <slot name="desc"></slot>
+          <slot name="time"></slot>
+          <slot name="link"></slot>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <div class="container">
+    <div class="row" id="switcher">
+    </div>
+  </div>
+</wc-router>
+
+<p onclick="route('new')">dene</p>
+
+<script src="/bundle.js"></script>
+</body>
+</html>
